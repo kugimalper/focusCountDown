@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.timerFunc), userInfo: nil, repeats: true)
         actionviewsOutlet.isHidden = true
         
-        view.backgroundColor = UIColor.blue
+        view.backgroundColor = UIColor.red
     }
     
     
@@ -62,6 +62,7 @@ class ViewController: UIViewController {
         timer.invalidate()
         actionviewsOutlet.isHidden = false
         view.backgroundColor = UIColor.white
+        progressBar.progress = 1.0
     }
     
     
