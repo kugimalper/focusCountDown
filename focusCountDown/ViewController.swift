@@ -38,7 +38,8 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor(red: 52/255, green: 73/255, blue: 94/255, alpha: 1.0)
         circleAroundTheCountDown.isHidden = false
     }
-    
+    //rgba(52, 73, 94,1.0)
+    // rgba(22, 160, 133,1.0)
     // rgba(52, 73, 94,1.0)
     func timerFunc () {
         print ("çalışıyor")
@@ -61,7 +62,7 @@ class ViewController: UIViewController {
         timer.invalidate()
         actionviewsOutlet.isHidden = false
         stepperOutlet.value = Double(countDownLabel.text!)!
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor (colorLiteralRed: 235/255.0, green: 239/255.0, blue: 243/255.0, alpha: 1.0)
         circleAroundTheCountDown.isHidden = true
         //progressBar.progress = 1.0
     }
