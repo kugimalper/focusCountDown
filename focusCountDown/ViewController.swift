@@ -26,23 +26,19 @@ class ViewController: UIViewController {
         second = Int(countDownLabel.text!)!
         progressBar.progress = 1
         progressValue = (1 / Float(second))
-    
+        
     }
-    
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print ("ekrana dokundun")
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.timerFunc), userInfo: nil, repeats: true)
         actionviewsOutlet.isHidden = true
-        
         view.backgroundColor = UIColor.red
     }
     
     
     func timerFunc () {
         print ("çalışıyor")
-        
         
         if second <= 0 {
             timer.invalidate()
@@ -69,7 +65,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
