@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print ("ekrana dokundun")
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.timerFunc), userInfo: nil, repeats: true)
+         actionviewsOutlet.isHidden = true
     }
     
     
@@ -46,6 +47,8 @@ class ViewController: UIViewController {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
      print ("touch ended")
+        
+        actionviewsOutlet.isHidden = false
     }
     
     
