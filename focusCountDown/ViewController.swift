@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         countDownLabel.text! = String (Int(sender.value))
         print (sender.value)
         progressBar.progress = 0
+        
+        second = Int(countDownLabel.text!)!
      }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -35,6 +37,8 @@ class ViewController: UIViewController {
         print ("çalışıyor")
         if second <= 0 {
             timer.invalidate()
+            second = 0
+            return
         }
         second -= 1
         print (second)
