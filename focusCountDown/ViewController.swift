@@ -22,16 +22,19 @@ class ViewController: UIViewController {
     @IBAction func stepperAction(_ sender: UIStepper) {
         countDownLabel.text! = String (Int(sender.value))
         print (sender.value)
-        progressBar.progress = 0
-        
         second = Int(countDownLabel.text!)!
+        progressBar.progress = 0
      }
     
+  
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print ("ekrana dokundun")
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.timerFunc), userInfo: nil, repeats: true)
          actionviewsOutlet.isHidden = true
-    }
+        
+        view.backgroundColor = UIColor.blue
+        }
     
     
     func timerFunc () {
@@ -43,12 +46,14 @@ class ViewController: UIViewController {
         }
         second -= 1
         print (second)
+        countDownLabel.text! = String(second)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
      print ("touch ended")
-        timer.invalidate() 
+        timer.invalidate()
         actionviewsOutlet.isHidden = false
+        view.backgroundColor = UIColor.white
     }
     
     
