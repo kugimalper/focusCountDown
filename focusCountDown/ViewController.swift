@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
      print ("touch ended")
-        
+        timer.invalidate() 
         actionviewsOutlet.isHidden = false
     }
     
