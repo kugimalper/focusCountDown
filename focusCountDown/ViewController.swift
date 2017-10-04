@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var timer = Timer()
     var progressValue : Float = 0
     
+    @IBOutlet weak var circleAroundTheCountDown: UIImageView!
     @IBOutlet weak var actionviewsOutlet: UIView!
     @IBOutlet weak var countDownLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
@@ -24,8 +25,9 @@ class ViewController: UIViewController {
         countDownLabel.text! = String (Int(sender.value))
         print (sender.value)
         second = Int(countDownLabel.text!)!
-        //progressBar.progress = 1
+        progressBar.progress = 1
         progressValue = (1 / Float(second))
+        stepperOutlet.value = Double(countDownLabel.text!)!
         
     }
     
@@ -34,6 +36,7 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.timerFunc), userInfo: nil, repeats: true)
         actionviewsOutlet.isHidden = true
         view.backgroundColor = UIColor(red: 52/255, green: 73/255, blue: 94/255, alpha: 1.0)
+        circleAroundTheCountDown.isHidden = false
     }
     
     // rgba(52, 73, 94,1.0)
@@ -43,7 +46,7 @@ class ViewController: UIViewController {
         if second <= 0 {
             timer.invalidate()
             second = 0
-            
+           
             return
         }
         second -= 1
@@ -57,7 +60,9 @@ class ViewController: UIViewController {
         print ("touch ended")
         timer.invalidate()
         actionviewsOutlet.isHidden = false
+        stepperOutlet.value = Double(countDownLabel.text!)!
         view.backgroundColor = UIColor.white
+        circleAroundTheCountDown.isHidden = true
         //progressBar.progress = 1.0
     }
     
@@ -65,7 +70,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        circleAroundTheCountDown.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
     

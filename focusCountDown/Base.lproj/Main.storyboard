@@ -62,6 +62,7 @@
                     </view>
                     <connections>
                         <outlet property="actionviewsOutlet" destination="ICX-Kt-qTN" id="R2h-LK-zPK"/>
+                        <outlet property="circleAroundTheCountDown" destination="8iX-XI-3ek" id="rHN-fc-3vs"/>
                         <outlet property="countDownLabel" destination="cwo-Mc-xXj" id="BWj-Xn-7ij"/>
                         <outlet property="progressBar" destination="2vh-Xw-Bao" id="ZJd-VO-rxI"/>
                         <outlet property="stepperOutlet" destination="Efy-AP-tOT" id="lgD-aW-fYT"/>
