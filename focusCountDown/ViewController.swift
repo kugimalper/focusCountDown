@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print ("ekrana dokundun")
+        countDownLabel.textColor = UIColor.white
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.timerFunc), userInfo: nil, repeats: true)
         actionviewsOutlet.isHidden = true
         view.backgroundColor = UIColor(red: 52/255, green: 73/255, blue: 94/255, alpha: 1.0)
@@ -59,6 +60,7 @@ class ViewController: UIViewController {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         print ("touch ended")
+        countDownLabel.textColor = UIColor.black
         timer.invalidate()
         actionviewsOutlet.isHidden = false
         stepperOutlet.value = Double(countDownLabel.text!)!
