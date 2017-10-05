@@ -14,6 +14,7 @@
 		1826F1D81F84B7D3006EA496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1826F1D61F84B7D3006EA496 /* LaunchScreen.storyboard */; };
 		1826F1E31F84B7D3006EA496 /* focusCountDownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F1E21F84B7D3006EA496 /* focusCountDownTests.swift */; };
 		1826F1EE1F84B7D3006EA496 /* focusCountDownUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826F1ED1F84B7D3006EA496 /* focusCountDownUITests.swift */; };
+		18F87E031F860A7700FF4AFB /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F87E021F860A7700FF4AFB /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1826F1E91F84B7D3006EA496 /* focusCountDownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = focusCountDownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1826F1ED1F84B7D3006EA496 /* focusCountDownUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = focusCountDownUITests.swift; sourceTree = "<group>"; };
 		1826F1EF1F84B7D3006EA496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F87E021F860A7700FF4AFB /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultViewController.swift; path = ../ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				1826F1CD1F84B7D3006EA496 /* AppDelegate.swift */,
 				1826F1CF1F84B7D3006EA496 /* ViewController.swift */,
+				18F87E021F860A7700FF4AFB /* ResultViewController.swift */,
 				1826F1D11F84B7D3006EA496 /* Main.storyboard */,
 				1826F1D41F84B7D3006EA496 /* Assets.xcassets */,
 				1826F1D61F84B7D3006EA496 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				1826F1D01F84B7D3006EA496 /* ViewController.swift in Sources */,
 				1826F1CE1F84B7D3006EA496 /* AppDelegate.swift in Sources */,
+				18F87E031F860A7700FF4AFB /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +511,7 @@
 				1826F1F41F84B7D3006EA496 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1826F1F51F84B7D3006EA496 /* Build configuration list for PBXNativeTarget "focusCountDownTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				1826F1F71F84B7D3006EA496 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1826F1F81F84B7D3006EA496 /* Build configuration list for PBXNativeTarget "focusCountDownUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				1826F1FA1F84B7D3006EA496 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,11 +8,16 @@
 
 import UIKit
 
+var counter = 0
+var leapArray = [String] ()
+var second = 0
+
 class ViewController: UIViewController {
     // saniye bilgisi
-    var second = 0
+    
     var timer = Timer()
     var progressValue : Float = 0
+    
     
     @IBOutlet weak var circleAroundTheCountDown: UIImageView!
     @IBOutlet weak var actionviewsOutlet: UIView!
@@ -23,7 +28,7 @@ class ViewController: UIViewController {
     
     @IBAction func stepperAction(_ sender: UIStepper) {
         countDownLabel.text! = String (Int(sender.value))
-        print (sender.value)
+        //print (sender.value)
         second = Int(countDownLabel.text!)!
         progressBar.progress = 1
         progressValue = (1 / Float(second))
@@ -32,7 +37,10 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print ("ekrana dokundun")
+    
+        //print ("ekrana dokundun")
+        counter += 1
+        print (counter)
         countDownLabel.textColor = UIColor.white
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.timerFunc), userInfo: nil, repeats: true)
         actionviewsOutlet.isHidden = true
@@ -56,7 +64,21 @@ class ViewController: UIViewController {
         countDownLabel.text! = String(second)
         progressBar.progress -=  progressValue
         
-    }
+        if leapArray.count >= 1 {
+            if (Int(countDownLabel.text!)!) == Int(leapArray.last!) {
+                
+            } else {
+                leapArray.append(String(countDownLabel.text!)!)}
+        } else {
+            leapArray.append(String(countDownLabel.text!)!)
+        }
+        
+        //leapArray.append ("\(second) ")
+        
+        
+        
+        
+}
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         print ("touch ended")
@@ -66,6 +88,7 @@ class ViewController: UIViewController {
         stepperOutlet.value = Double(countDownLabel.text!)!
         view.backgroundColor = UIColor (colorLiteralRed: 235/255.0, green: 239/255.0, blue: 243/255.0, alpha: 1.0)
         circleAroundTheCountDown.isHidden = true
+        
         //progressBar.progress = 1.0
     }
     
